@@ -74,7 +74,7 @@ export default class ButtonList extends Component {
                         <MDBInput icon="search" type='text' hint='Search' onChange={this.onchange}/>
                     </div>
                     <div className='col'>
-                        {/* <Button style={{width: '10em'}}variant='secondary'> Print </Button> */}
+                        <Button style={{width: '10em'}}variant='secondary'> Print </Button>
                         <MDBInput type='textarea' disabled label='compress' hint={this.state.cardChecked}></MDBInput>
 
                     </div>
