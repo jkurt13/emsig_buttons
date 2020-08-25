@@ -92,7 +92,7 @@ export default class ButtonCard extends Component {
                     </div>
                     </div>
                 </Card>
-                <Modal show={this.state.show} onHide={()=>this.setState({show: false})} animation={false} size='lg'>
+                <Modal  show={this.state.show} onHide={()=>this.setState({show: false})} animation={false} size='lg'>
                     <Modal.Header closeButton>
                             <h4 style={{marginRight: '13em'}}>Card Number: {this.state.name}</h4>
                             <ReactToPrint 
@@ -102,13 +102,12 @@ export default class ButtonCard extends Component {
                     </Modal.Header>
                     <ModalBody className='print-container'>
                         <div ref={el => (this.componentRef = el)}>
-                            <h4>Description: {this.state.description}</h4>                   
+                            <h4>Description: {this.state.description}</h4>                  
                             <img src={this.state.imageUrl} alt='loading' style={{width: '48em', height:'45em'}}/>
                         </div>
                     </ModalBody>
-                    
                  </Modal>
-
+               
             </div>
         )
     }

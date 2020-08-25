@@ -29,6 +29,11 @@ export default class ButtonList extends Component {
         console.log(cardChecked)
     }
 
+    clearSearch = () => {
+        
+        this.setState({search: ''})
+    }
+
 
     renderButton = button => {
         if (this.state.button.length <= 0) {
@@ -71,11 +76,12 @@ export default class ButtonList extends Component {
                 <br></br>
                 <div className='row' >
                     <div className='col'>
-                        <MDBInput icon="search" type='text' hint='Search' onChange={this.onchange}/>
+                        <Button style={{width: '10em'}} variant='secondary' onClick={this.clearSearch}> Clear</Button>
+                        <MDBInput value={this.state.search} icon="search" type='text' hint='Search' icon='search' onChange={this.onchange}/>
                     </div>
                     <div className='col'>
                         <Button style={{width: '10em'}}variant='secondary'> Print </Button>
-                        <MDBInput type='textarea' disabled label='compress' hint={this.state.cardChecked}></MDBInput>
+                        <MDBInput type='textarea' disabled label='compress' hint={this.state.cardChecked}/>
 
                     </div>
                
